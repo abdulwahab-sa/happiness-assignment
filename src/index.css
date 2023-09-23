@@ -1,0 +1,479 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 40px;  
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/*  ----------------         NAVIGATION         ------------------          */
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #646cff;
+}
+
+.logo  img {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+
+}
+
+.nav-links {
+ width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 20px;
+  gap: 30px;
+  font-size: 18px;
+
+}
+
+
+/*  ----------------         AUTH TEMPLATE USED IN LOGIN ADN REGISTER PAGE         ------------------          */
+
+
+.form-template {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  background-color: #646cff;
+  border-radius: 20px;
+  padding: 26px 20px;
+  color: #fff;
+}
+
+.form-template > form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding:40px;
+  gap: 18px;
+}
+
+.form-template > form > input {
+  height: 32px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #242424;
+  outline: none;
+}
+
+.submit-button{
+  color:  #646cff;
+  font-size: 14px ;
+  font-weight: 700 ;
+  text-transform: uppercase;
+  background-color: #fff764; 
+  border-radius: 10px;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+
+/*  ----------------         SIDEBAR         ------------------          */
+
+
+.sidebar{
+  
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 50px 0;
+  min-height: 100vh; 
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.sidebar > span {
+  font-size: 18px;
+  font-weight: 500;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar > span:hover {
+  background-color: #646cff;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.inactive-item{
+  color: #646cff;
+  background-color: #fff;
+}
+
+.active-item{
+  color: #fff;
+  background-color: #646cff;
+}
+
+
+p{
+  color: #242424;
+}
+
+
+/*  ----------------         MAIN CONTENT         ------------------          */
+
+.happiness-widget{
+  display: flex;
+  flex-direction: row;
+}
+
+.main-wrapper{
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*  ----------------         ALL COUNTRIES         ------------------          */
+
+.country-list-container {
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #242424;
+}
+
+.country-list-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #535bf2;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%; /* Each column takes up 48% of the container's width with a small gap in between */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.country-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.country-table th,
+.country-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.country-table th{
+  color: #535bf2;
+  font-size: 18px;
+}
+
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.pagination button.active {
+  background-color: #fff764;
+  color: #242424;
+}
+
+
+/*  ----------------         RANKINGSBYYEAR         ------------------          */
+
+/* CSS for the CountryListByYear component */
+.country-list-container {
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.year-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.year-input label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.year-input input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.year-input button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.rankings-year-columns {
+  display: flex;
+  justify-content: center;
+}
+
+.rankings-year-column {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.rankings-year-table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.rankings-year-table th,
+.rankings-year-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+ 
+}
+
+.rankings-year-table th {
+  color: #535bf2;
+  font-size: 18px;
+}
+
+.year-input {
+  width:50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.year-input input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #535bf2;
+}
+
+.year-input input::placeholder {
+  color: #242424;
+  font-family: inherit;
+}
+
+
+.year-input button {
+  padding: 8px 20px;
+  font-size: 14px;
+  background-color: #535bf2;
+  border: none;
+  font-weight: 600;
+}
+
+.no-data-placeholder{
+  color: #535bf2;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+/*************************  AG GRID  *************************/
+
+.ag-theme-alpine.rankings-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the select dropdowns with the branding color */
+.branding-select {
+  background-color: #535bf2;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+
+.filters{
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.filters label{
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+
+.filters button{
+  display: block;
+  margin: 16px auto;
+  border: none;
+  background-color: #4d53df;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* Adjust the column width to take full available space */
+.ag-header-cell {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Show ellipsis for long text */
+  width: 100%;
+}
+
+.ag-header-cell-text {
+  display: flex;
+  justify-content: center; /* Center align column headers */
+  align-items: center;
+}
+
+/* Style the header background and text */
+.ag-header {
+  background-color: #535bf2;
+  color: white;
+  font-weight: bold;
+}
+
+/* Style the selected option in the dropdown */
+.branding-select option:checked {
+  background-color: #4d53df; /* Darker shade of branding color for selected option */
+}
+
+
+
+/* ************************* ABOUT US ************************* */
+
+.about-wrapper{
+  height: 350px;
+  width: 700px;
+  background-color: #646cff;
+  padding: 16px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.about-wrapper p {
+  color: #fff;
+}
